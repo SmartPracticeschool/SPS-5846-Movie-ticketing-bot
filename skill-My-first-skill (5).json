@@ -1,0 +1,1301 @@
+{
+  "intents": [
+    {
+      "intent": "Book",
+      "examples": [
+        {
+          "text": "Book seats for me"
+        },
+        {
+          "text": "Book tickets for the movie"
+        },
+        {
+          "text": "Can you book tickets for me"
+        },
+        {
+          "text": "I like to book seats"
+        },
+        {
+          "text": "Please Book seats for my movie"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Confirmation",
+      "examples": [
+        {
+          "text": "No"
+        },
+        {
+          "text": "Yes"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "enquiry",
+      "examples": [
+        {
+          "text": "10:00AM"
+        },
+        {
+          "text": "can you show available movies?"
+        },
+        {
+          "text": "I need movies"
+        },
+        {
+          "text": "Movie list"
+        },
+        {
+          "text": "Show latest movie"
+        },
+        {
+          "text": "show movies available right now"
+        },
+        {
+          "text": "Show movies list"
+        },
+        {
+          "text": "Transformers"
+        },
+        {
+          "text": "What the new movie available now?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "Good afternoon"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Timing",
+      "examples": [
+        {
+          "text": "3:20 PM"
+        },
+        {
+          "text": "6:00 PM"
+        },
+        {
+          "text": "Could you show the timing for the movie?"
+        },
+        {
+          "text": "Love Mocktail"
+        },
+        {
+          "text": "Sami 2"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "book",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "book",
+          "synonyms": [
+            "billing",
+            "book",
+            "bookings",
+            "Book seats",
+            "Book tickets",
+            "buy seats",
+            "buy tickets"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "movie list",
+          "synonyms": [
+            "movie list",
+            "new list",
+            "new movie"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "offers",
+          "synonyms": [
+            "deals",
+            "discount",
+            "discounts"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good afternoon",
+          "synonyms": [
+            "ga",
+            "good afternoon",
+            "gud aftn"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good evening",
+          "synonyms": [
+            "ge",
+            "good evening",
+            "gud evng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good morning",
+          "synonyms": [
+            "gm",
+            "good morning",
+            "gud mrg",
+            "gud mrng"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": [
+            "Unified Payment Interface"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Seats",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Aladin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Avengers",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Enthiran",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Frozen 2",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lion King",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Love mocktail",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sami 2",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Transformers",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Time",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "10:00 AM",
+          "synonyms": [
+            "10:00 AM"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "12:40 PM",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "3:20 PM",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "6:00 PM",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "9:20 PM",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Timing",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "show time",
+          "synonyms": [
+            "all show times",
+            "available movies right now",
+            "next show time",
+            "show time",
+            "timing"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_6_1603269818614",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1603767719765",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_10_1603767719769"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1603269818614",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1603456325621",
+      "previous_sibling": "node_6_1603772524418"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1603767641835",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_1_1603767641838"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1603423882167",
+      "context": {
+        "Time": "@Time"
+      },
+      "conditions": "@Time",
+      "event_name": "input",
+      "dialog_node": "handler_2_1603423882181"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1603767562518",
+      "context": {
+        "Seats": "@Seats"
+      },
+      "conditions": "@Seats",
+      "event_name": "input",
+      "dialog_node": "handler_4_1603767562522"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How many Seats do you want to book?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1603767641835",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1603767641838",
+      "previous_sibling": "handler_1_1603767641838"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1603423882167",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1603423882181",
+      "previous_sibling": "handler_2_1603423882181"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1603422348075",
+      "context": {
+        "enquiry": "@Time"
+      },
+      "conditions": "@Time",
+      "event_name": "input",
+      "dialog_node": "handler_8_1603422348103"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Can you Specify the Time?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Timings are : 10:00AM, 12:40PM, 3:20PM, 6:00PM, 9:20PM"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_8_1603422348075",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1603422348104",
+      "previous_sibling": "handler_8_1603422348103"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Can you tell which movie do you want to book seats for?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1603767562518",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1603767562522",
+      "previous_sibling": "handler_4_1603767562522"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "We Accept UPI and Card"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1603767719765",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1603767719769",
+      "previous_sibling": "handler_10_1603767719769"
+    },
+    {
+      "type": "standard",
+      "title": "email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you for giving your mail ID,  your mail id is: $email is used for further reference"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "dialog_node": "node_1_1603787338352"
+    },
+    {
+      "type": "standard",
+      "title": "Enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#enquiry || @enquiry",
+      "dialog_node": "node_4_1602651360010",
+      "previous_sibling": "node_9_1602506634114"
+    },
+    {
+      "type": "standard",
+      "title": "Seats and pricesEnt",
+      "parent": "node_9_1602667120005",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@Seats",
+      "dialog_node": "node_4_1602673901478"
+    },
+    {
+      "type": "frame",
+      "title": "Booking",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you, Your Booking of $Seats for the time $enquiry is placed. Please Pay Using $payment"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#Book || @book",
+      "digress_in": "returns",
+      "dialog_node": "node_6_1603269818614",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_8_1602652491583"
+    },
+    {
+      "type": "standard",
+      "title": "Deleting Context",
+      "output": {
+        "deleted": "<?context.remove('enquiry')?><?context.remove('number')?><?context.remove('Seats')?><?context.remove('payment')?><?context.remove('email')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1603269818614",
+      "conditions": "true",
+      "dialog_node": "node_6_1603772524418"
+    },
+    {
+      "type": "standard",
+      "title": "timing",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Timing || @Timing",
+      "digress_in": "returns",
+      "dialog_node": "node_8_1602652491583",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_4_1602651360010"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Greetings || @greetings",
+      "dialog_node": "node_9_1602506634114",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "times",
+      "parent": "node_8_1602652491583",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@Time",
+      "dialog_node": "node_9_1602667120005",
+      "previous_sibling": "slot_5_1603423882167"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Available Seats are: 20, Price per seat = Rs.110"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602673901478",
+      "conditions": "@Seats:(Sami 2)",
+      "dialog_node": "response_10_1603422131455",
+      "previous_sibling": "response_2_1603422070545"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602506634114",
+      "conditions": "anything_else",
+      "dialog_node": "response_1_1602588901505",
+      "previous_sibling": "response_5_1602588871915"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We are having 20% off "
+              },
+              {
+                "text": "We are having 5% off"
+              },
+              {
+                "text": "We are having 10% off"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602651360010",
+      "conditions": "@enquiry:offers",
+      "dialog_node": "response_1_1602651829220",
+      "previous_sibling": "response_8_1602651471428"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Available Movies at selected time",
+            "options": [
+              {
+                "label": "Love Mocktail",
+                "value": {
+                  "input": {
+                    "text": "Love Mocktail"
+                  }
+                }
+              },
+              {
+                "label": "Avengers ",
+                "value": {
+                  "input": {
+                    "text": "Avengers "
+                  }
+                }
+              },
+              {
+                "label": "Enthiran",
+                "value": {
+                  "input": {
+                    "text": "Enthiran"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1602667120005",
+      "conditions": "@Time:(10:00 AM)",
+      "dialog_node": "response_1_1602667151497",
+      "previous_sibling": "node_4_1602673901478"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Available Seats are: 29, Price per seat = Rs.110"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602673901478",
+      "conditions": "@Seats:Enthiran",
+      "dialog_node": "response_1_1602673945660"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Available Timing",
+            "options": [
+              {
+                "label": "12:40 PM",
+                "value": {
+                  "input": {
+                    "text": "12:40 PM"
+                  }
+                }
+              },
+              {
+                "label": "3:20 PM",
+                "value": {
+                  "input": {
+                    "text": "3:20 PM"
+                  }
+                }
+              },
+              {
+                "label": "6:00 PM",
+                "value": {
+                  "input": {
+                    "text": "6:00 PM"
+                  }
+                }
+              },
+              {
+                "label": "9:20 PM",
+                "value": {
+                  "input": {
+                    "text": "9:20 PM"
+                  }
+                }
+              },
+              {
+                "label": "10:00 AM",
+                "value": {
+                  "input": {
+                    "text": "10:00 AM"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_8_1602652491583",
+      "conditions": "#Timing",
+      "dialog_node": "response_2_1602652525786",
+      "previous_sibling": "node_9_1602667120005"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Movies available at this time",
+            "options": [
+              {
+                "label": "Love mocktail",
+                "value": {
+                  "input": {
+                    "text": "Love mocktail"
+                  }
+                }
+              },
+              {
+                "label": "Transformers",
+                "value": {
+                  "input": {
+                    "text": "Transformers"
+                  }
+                }
+              },
+              {
+                "label": "Lion King",
+                "value": {
+                  "input": {
+                    "text": "Lion King"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1602667120005",
+      "conditions": "@Time:(3:20 PM)",
+      "dialog_node": "response_2_1602672980888",
+      "previous_sibling": "response_4_1602672895244"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Available Seats are: 21, Price per seat = Rs.120"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602673901478",
+      "conditions": "@Seats:Aladin",
+      "dialog_node": "response_2_1603422070545",
+      "previous_sibling": "response_3_1603422026443"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Available Seats are: 21, Price per seat = Rs.120"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602673901478",
+      "conditions": "@Seats:(Lion King)",
+      "dialog_node": "response_3_1603422026443",
+      "previous_sibling": "response_8_1603421963422"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602506634114",
+      "conditions": "@greetings:(Good morning)",
+      "dialog_node": "response_4_1602588832419",
+      "previous_sibling": "response_7_1602588819867"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Movies available at this time",
+            "options": [
+              {
+                "label": "Sami 2",
+                "value": {
+                  "input": {
+                    "text": "Sami 2"
+                  }
+                }
+              },
+              {
+                "label": "Enthiran ",
+                "value": {
+                  "input": {
+                    "text": "Enthiran"
+                  }
+                }
+              },
+              {
+                "label": "Avengers",
+                "value": {
+                  "input": {
+                    "text": "Avengers"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1602667120005",
+      "conditions": "@Time:(12:40 PM)",
+      "dialog_node": "response_4_1602672895244",
+      "previous_sibling": "response_1_1602667151497"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Available Seats are: 29, Price per seat = Rs.110"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602673901478",
+      "conditions": "@Seats:(Love mocktail)",
+      "dialog_node": "response_4_1602674564887",
+      "previous_sibling": "response_1_1602673945660"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602506634114",
+      "conditions": "@greetings:(Good afternoon)",
+      "dialog_node": "response_5_1602588871915",
+      "previous_sibling": "response_7_1602588860736"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602652491583",
+      "dialog_node": "response_5_1602657976606",
+      "previous_sibling": "response_2_1602652525786"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Movies available at this time",
+            "options": [
+              {
+                "label": "Frozen 2",
+                "value": {
+                  "input": {
+                    "text": "Frozen 2"
+                  }
+                }
+              },
+              {
+                "label": "Avengers",
+                "value": {
+                  "input": {
+                    "text": "Avengers"
+                  }
+                }
+              },
+              {
+                "label": "Lion King",
+                "value": {
+                  "input": {
+                    "text": "Lion King"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1602667120005",
+      "conditions": "@Time:(9:20 PM)",
+      "dialog_node": "response_5_1602673107832",
+      "previous_sibling": "response_7_1602673048439"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Available Seats are: 20, Price per seat = Rs.110"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602673901478",
+      "conditions": "@Seats:Transformers",
+      "dialog_node": "response_6_1603422214140",
+      "previous_sibling": "response_10_1603422131455"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602506634114",
+      "conditions": "#Greetings",
+      "dialog_node": "response_7_1602588819867"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Evening"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602506634114",
+      "conditions": "@greetings:(Good evening)",
+      "dialog_node": "response_7_1602588860736",
+      "previous_sibling": "response_4_1602588832419"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Movies available at this time",
+            "options": [
+              {
+                "label": "Love Mocktail",
+                "value": {
+                  "input": {
+                    "text": "Love Mocktail"
+                  }
+                }
+              },
+              {
+                "label": "Aladin",
+                "value": {
+                  "input": {
+                    "text": "Aladin"
+                  }
+                }
+              },
+              {
+                "label": "Frozen 2",
+                "value": {
+                  "input": {
+                    "text": "Frozen 2"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1602667120005",
+      "conditions": "@Time:(6:00 PM)",
+      "dialog_node": "response_7_1602673048439",
+      "previous_sibling": "response_2_1602672980888"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "source": "https://static.moviecrow.com/marquee/sarkar-uk-theatre-list/152259_thumb_665.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_4_1602651360010",
+      "conditions": "@enquiry:(movie list)",
+      "dialog_node": "response_8_1602651471428"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Available Seats are: 12, Price per seat = Rs.120"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602673901478",
+      "conditions": "@Seats:(Frozen 2)",
+      "dialog_node": "response_8_1603421963422",
+      "previous_sibling": "response_9_1603421892337"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Available Seats are: 29, Price per seat = Rs.110"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602673901478",
+      "conditions": "@Seats:Avengers",
+      "dialog_node": "response_9_1603421892337",
+      "previous_sibling": "response_4_1602674564887"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1603269818614",
+      "variable": "$payment",
+      "dialog_node": "slot_3_1603767719765",
+      "previous_sibling": "slot_5_1603767641835"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1602652491583",
+      "variable": "$Time",
+      "dialog_node": "slot_5_1603423882167"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1603269818614",
+      "variable": "$number",
+      "dialog_node": "slot_5_1603767641835",
+      "previous_sibling": "slot_9_1603767562518"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1603269818614",
+      "variable": "$enquiry",
+      "dialog_node": "slot_8_1603422348075",
+      "previous_sibling": "handler_1_1603456325621"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1603269818614",
+      "variable": "$Seats",
+      "dialog_node": "slot_9_1603767562518",
+      "previous_sibling": "slot_8_1603422348075"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. I am movie ticketing bot, Capable of showing available movies, find offers, place orders. How can i help you ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
